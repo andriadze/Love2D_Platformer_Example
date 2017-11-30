@@ -90,6 +90,7 @@ function Game:update(dt)
   
   if self.player.grippedEntity ~= nil and self.player.isGripping then
     self.player.grippedEntity.direction = self.player.direction
+    self.player.grippedEntity.maxVelX = self.player.maxVelX
     self.player.grippedEntity.xVel = self.player.xVel
   end
   
@@ -117,7 +118,7 @@ function Game:manageKeyboard(dt)
     self.player:jump(dt)
   end
   
-  if love.keyboard.isDown("q") then
+  if love.keyboard.isDown("s") then
     if self.player.isGripping == false then
       for i=1,#self.entities do
         if self.player:isEntityGrippable(self.entities[i]) then
