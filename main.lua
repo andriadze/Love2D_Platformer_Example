@@ -2,7 +2,7 @@ bump = require "libs/bump"
 sti = require "libs/sti"
 Object = require "libs/classic"
 require "player"
-require "Game"
+require "game"
 
 anim8 = require 'libs/anim8'
 
